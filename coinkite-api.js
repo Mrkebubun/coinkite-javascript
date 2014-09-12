@@ -4,8 +4,8 @@
 // https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js
 //      or 
 // http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js
-//
-
+//      or
+// /bower_components/CryptoJS/build/rollups/hmac-sha256.js
 
 // Using approach from 
 //   http://caolanmcmahon.com/posts/writing_for_node_and_the_browser/
@@ -33,6 +33,7 @@
 		var data = endpoint + '|' + ts;
 
 		// requires: http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js
+                // or /bower_components/CryptoJS/build/rollups/hmac-sha256.js
 		var hm;
 
 		if(typeof CryptoJS === 'undefined') {
