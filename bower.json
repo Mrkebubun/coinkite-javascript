@@ -1,0 +1,22 @@
+{
+  "name": "coinkite",
+  "version": "0.0.1",
+  "homepage": "https://docs.coinkite.com/",
+  "authors": [
+    "Paul Iannazzo <somethingitalian@gmail.com>"
+  ],
+  "description": "helper functions for creating HTTP headers for the coinkite REST API",
+  "main": "coinkite-api.js",
+  "keywords": [
+    "coinkite",
+    "bitcoin"
+  ],
+  "license": "coinkite",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
