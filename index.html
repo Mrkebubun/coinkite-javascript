@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Bitcoin JS by coinkite</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Bitcoin JS</h1>
+        <p>Coinkite Bitcoin API for Javascript, Node.js (NPM) and Bower</p>
+
+        <p class="view"><a href="https://github.com/coinkite/coinkite-javascript">View the Project on GitHub <small>coinkite/coinkite-javascript</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/coinkite/coinkite-javascript/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/coinkite/coinkite-javascript/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/coinkite/coinkite-javascript">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="coinkite-bitcoin-api-for-javascript--nodejs" class="anchor" href="#coinkite-bitcoin-api-for-javascript--nodejs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coinkite Bitcoin API for Javascript / Node.js</h1>
+
+<p><a href="https://docs.coinkite.com/">Learn more about Coinkite's API here</a>
+and visit the <a href="https://coinkite.com/">Coinkite Main Site</a> to open your
+account today!</p>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Every request made to the Coinkite API requires three special header
+lines. This code can generate the timestamp and signature values that
+you will need.</p>
+
+<p>Example header lines:</p>
+
+<pre><code>X-CK-Key: K5555a555-55a555aa-a55aa5a5555aaa5a
+X-CK-Timestamp: 2014-06-23T03:10:04.905376
+X-CK-Sign: 0aa7755aaa45189a98a5a8a887a564aa55aa5aa4aa7a98aa2858aaa60a5a56aa
+</code></pre>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>For use under <code>node</code>, you will need the <code>crypto</code> module. It's quite standard and
+you probably already have it.</p>
+
+<p>For use with Javascript on the browser side, you will need the
+HMAC-SHA256 code from <a href="http://crypto-js.googlecode.com">CryptoJS</a>.
+Before you do that however, think long and hard why the browser should
+have any access to your Coinkite account.</p>
+
+<p>The keys you need can be created on
+Coinkite.com under Merchant / API.</p>
+
+<h2>
+<a id="how-to-use-node" class="anchor" href="#how-to-use-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use: Node</h2>
+
+<div class="highlight highlight-javascript"><pre>    CK_API <span class="pl-k">=</span> <span class="pl-s3">require</span>(<span class="pl-s1"><span class="pl-pds">'</span>./coinkite-api.js<span class="pl-pds">'</span></span>)
+    <span class="pl-en">console</span><span class="pl-s3">.log</span>(<span class="pl-s1"><span class="pl-pds">"</span>Example:<span class="pl-cce">\n</span><span class="pl-pds">"</span></span>, CK_API.auth_headers(<span class="pl-s1"><span class="pl-pds">'</span>aa<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>bb<span class="pl-pds">'</span></span>, <span class="pl-s1"><span class="pl-pds">'</span>cc<span class="pl-pds">'</span></span>))</pre></div>
+
+<h2>
+<a id="how-to-use-javascript" class="anchor" href="#how-to-use-javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use: Javascript</h2>
+
+<p>In the <code>HEAD</code> of your HTML, include the javascript libary from:</p>
+
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js
+</code></pre>
+
+<p>And the <code>coinkite-api.js</code> file after that.</p>
+
+<p>Then, make sure that all your HTTP calls to Coinkite's API have the extra
+headers supplied from <code>auth_headers</code>. You need to use a hook in jQuery or
+whatever library you are using to do your REST calls.</p>
+
+<p>A more complete example can be found in our 
+<a href="https://github.com/coinkite/coinkite-angular">Angular Coinkite API example</a>
+which uses this code.</p>
+
+<h2>
+<a id="more-about-coinkite" class="anchor" href="#more-about-coinkite" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about Coinkite</h2>
+
+<p><em>Join The Most Powerful Bitcoin Platform</em></p>
+
+<p>Coinkite is the leading <a href="https://coinkite.com/faq/features">bitcoin wallet</a> with
+<a href="https://coinkite.com/faq/multisig">multi-signature</a>,
+<a href="https://coinkite.com/faq/security">bank-grade security</a>,
+<a href="https://coinkite.com/faq/developers">developer's API</a> and <a href="https://coinkite.com/privacy">hardcore privacy</a>.</p>
+
+<p><a href="https://coinkite.com/">Get Your Account Today!</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/coinkite">coinkite</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-40834364-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
