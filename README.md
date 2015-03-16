@@ -1,4 +1,4 @@
-# Coinkite API Code for Javascript / Node.js
+# Coinkite Bitcoin API for Javascript / Node.js
 
 [Learn more about Coinkite's API here](https://docs.coinkite.com/)
 and visit the [Coinkite Main Site](https://coinkite.com/) to open your
